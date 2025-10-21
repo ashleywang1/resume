@@ -87,28 +87,28 @@ const config: Config = {
           ],
         },
         {
-          title: 'Projects',
+          title: 'Built with',
           items: [
             {
-              label: 'MIT Mahjong 2048',
-              href: 'https://ashleywang1.github.io/2048/',
+              label: '🦖 Docusaurus',
+              href: 'https://docusaurus.io/',
             },
             {
-              label: 'Secure Mafia Game',
-              href: 'https://github.com/ashleywang1/857MafiaGame',
+              label: '📄 GitHub Pages',
+              href: 'https://pages.github.com/',
             },
             {
-              label: 'Climate Change Viz',
-              href: 'https://github.com/ashleywang1/cms631-final-project',
+              label: '🤖 Claude',
+              href: 'https://claude.ai/',
             },
             {
-              label: 'Tournament Manager',
-              href: 'https://github.com/ashleywang1/ECTC_tournament_manager',
+              label: '✨ Cursor',
+              href: 'https://cursor.com/',
             },
           ],
         },
       ],
-      copyright: `© ${new Date().getFullYear()} Ashley Wang. Built with Docusaurus.`,
+      copyright: `© ${new Date().getFullYear()} Ashley Wang.`,
     },
     prism: {
       theme: prismThemes.github,

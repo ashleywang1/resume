@@ -9,10 +9,22 @@
   position: relative;
   overflow: hidden;
   background: var(--ifm-background-color);
+}
+
+[data-theme='light'] .heroBanner {
+  color: var(--ifm-font-color-base);
+}
+
+[data-theme='dark'] .heroBanner {
   color: white;
 }
 
-.heroBanner .hero__title {
+[data-theme='light'] .heroBanner .hero__title {
+  color: var(--ifm-color-emphasis-900);
+  text-shadow: none;
+}
+
+[data-theme='dark'] .heroBanner .hero__title {
   color: white;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
@@ -33,9 +45,17 @@
   font-size: 1.2rem;
   margin: 1.5rem auto 2rem;
   max-width: 600px;
+  line-height: 1.6;
+}
+
+[data-theme='light'] .heroDescription {
+  color: var(--ifm-color-emphasis-800);
+  text-shadow: none;
+}
+
+[data-theme='dark'] .heroDescription {
   color: rgba(255, 255, 255, 0.95);
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
-  line-height: 1.6;
 }
 
 @media screen and (max-width: 996px) {
