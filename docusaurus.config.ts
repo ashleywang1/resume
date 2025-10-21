@@ -74,19 +74,6 @@ const config: Config = {
       style: 'dark',
       links: [
         {
-          title: 'Connect',
-          items: [
-            {
-              label: 'LinkedIn',
-              href: 'https://www.linkedin.com/in/ashley-wang-6854a4a4/',
-            },
-            {
-              label: 'GitHub',
-              href: 'https://github.com/ashleywang1',
-            },
-          ],
-        },
-        {
           title: 'Built with',
           items: [
             {
