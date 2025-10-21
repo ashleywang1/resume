@@ -13,6 +13,7 @@ type ProjectItem = {
   title: string;
   description: ReactNode;
   link: string;
+  githubLink?: string;
   icon: string;
   tags: string[];
   category: string;
@@ -79,12 +80,40 @@ const MITProjects: ProjectItem[] = [
     title: 'MIT Mahjong 2048',
     icon: '🀄',
     link: 'https://ashleywang1.github.io/2048/',
+    githubLink: 'https://github.com/ashleywang1/2048',
     category: 'MIT Project',
     tags: ['JavaScript', 'Game Development'],
     description: (
       <>
         A version of the 2048 game featuring Mahjong tiles, 
         made as an advertisement for the MIT Mahjong Club.
+      </>
+    ),
+  },
+  {
+    title: 'Fuel Efficiency Game',
+    icon: '🚗',
+    link: 'https://ashleywang1.github.io/FuelEfficiencyGame/CarGame/',
+    githubLink: 'https://github.com/ashleywang1/FuelEfficiencyGame',
+    category: 'MIT Project',
+    tags: ['JavaScript', 'Game Development', 'Education'],
+    description: (
+      <>
+        An interactive game teaching fuel efficiency concepts through 
+        gameplay mechanics. Built to promote environmental awareness.
+      </>
+    ),
+  },
+  {
+    title: '6.177 Falling Object Game',
+    icon: '🎮',
+    link: 'https://github.com/ashleywang1/FallingObjectGame',
+    category: 'MIT Project',
+    tags: ['Python', 'Game Development'],
+    description: (
+      <>
+        A Python-based falling object game created for MIT's 6.177 course, 
+        featuring arcade-style gameplay mechanics.
       </>
     ),
   },
@@ -96,7 +125,7 @@ const MITProjects: ProjectItem[] = [
     tags: ['Python', 'Cryptography', 'Distributed Systems'],
     description: (
       <>
-        A distributed multiplayer implementation of Mafia with secure 
+        A multiplayer implementation of Mafia with secure 
         cryptographic communications using Diffie-Hellman key exchange.
       </>
     ),
@@ -109,8 +138,8 @@ const MITProjects: ProjectItem[] = [
     tags: ['JavaScript', 'D3.js'],
     description: (
       <>
-        An interactive web-based exploration of climate change data 
-        with dynamic visualizations and data-driven storytelling.
+        An interactive web-based exploration of climate change data built for
+        MIT's CMS.631 course.
       </>
     ),
   },
@@ -122,7 +151,7 @@ const MITProjects: ProjectItem[] = [
     tags: ['Docker', 'Full-Stack'],
     description: (
       <>
-        A comprehensive tournament management system for the Eastern Collegiate 
+        A tournament management system for the Eastern Collegiate 
         Taekwondo Conference competitions.
       </>
     ),
@@ -132,9 +161,9 @@ const MITProjects: ProjectItem[] = [
 /**
  * @description Individual project card component
  */
-function Project({title, description, link, icon, tags, category}: ProjectItem) {
+function Project({title, description, link, githubLink, icon, tags, category, colSize = 'col--4'}: ProjectItem & {colSize?: string}) {
   return (
-    <div className={clsx('col col--4')}>
+    <div className={clsx('col', colSize)}>
       <div className={styles.projectCard}>
         <div className={styles.projectHeader}>
           <div className={styles.projectIcon}>{icon}</div>
@@ -147,13 +176,24 @@ function Project({title, description, link, icon, tags, category}: ProjectItem) 
             <span key={idx} className={styles.tag}>{tag}</span>
           ))}
         </div>
-        <Link
-          className={`button button--primary button--outline ${styles.projectButton}`}
-          href={link}
-          target="_blank"
-          rel="noopener noreferrer">
-          View Project →
-        </Link>
+        <div className={styles.buttonContainer}>
+          <Link
+            className={`button button--primary button--outline ${styles.projectButton}`}
+            href={link}
+            target="_blank"
+            rel="noopener noreferrer">
+            {githubLink ? 'Play Game →' : 'View Project →'}
+          </Link>
+          {githubLink && (
+            <Link
+              className={`button button--secondary button--outline ${styles.projectButton}`}
+              href={githubLink}
+              target="_blank"
+              rel="noopener noreferrer">
+              GitHub →
+            </Link>
+          )}
+        </div>
       </div>
     </div>
   );
@@ -175,7 +215,7 @@ export default function HomepageFeatures(): ReactNode {
           </p>
           <div className="row">
             {OpenSourceProjects.map((props, idx) => (
-              <Project key={idx} {...props} />
+              <Project key={idx} {...props} colSize="col--6" />
             ))}
           </div>
         </div>
@@ -191,7 +231,7 @@ export default function HomepageFeatures(): ReactNode {
           </p>
           <div className="row">
             {MITProjects.map((props, idx) => (
-              <Project key={idx} {...props} />
+              <Project key={idx} {...props} colSize="col--4" />
             ))}
           </div>
         </div>
