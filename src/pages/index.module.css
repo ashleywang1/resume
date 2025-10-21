@@ -8,13 +8,24 @@
   text-align: center;
   position: relative;
   overflow: hidden;
+  background: var(--ifm-background-color);
+  color: white;
+}
+
+.heroBanner .hero__title {
+  color: white;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.heroBanner .hero__subtitle {
+  color: var(--color-blue-accent);
 }
 
 .heroTagline {
   font-size: 1rem;
   font-weight: 600;
   margin: 0.75rem auto 0;
-  color: var(--ifm-color-primary-lightest);
+  color: var(--color-blue-accent);
   letter-spacing: 0.5px;
 }
 
@@ -22,7 +33,9 @@
   font-size: 1.2rem;
   margin: 1.5rem auto 2rem;
   max-width: 600px;
-  opacity: 0.9;
+  color: rgba(255, 255, 255, 0.95);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  line-height: 1.6;
 }
 
 @media screen and (max-width: 996px) {
@@ -47,6 +60,21 @@
   justify-content: center;
   gap: 1rem;
   flex-wrap: wrap;
+}
+
+.buttons .button {
+  background-color: var(--color-purple-accent);
+  border-color: var(--color-purple-accent);
+  color: white;
+  font-weight: 600;
+}
+
+.buttons .button:hover {
+  background-color: #b56de8;
+  border-color: #b56de8;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(162, 76, 223, 0.3);
 }
 
 .workSection {
@@ -75,7 +103,7 @@
   top: 0;
   bottom: 0;
   width: 3px;
-  background: var(--ifm-color-primary);
+  background: linear-gradient(180deg, var(--color-purple-accent), var(--color-blue-accent));
 }
 
 .timelineItem {
@@ -95,9 +123,9 @@
   width: 16px;
   height: 16px;
   border-radius: 50%;
-  background: var(--ifm-color-primary);
+  background: var(--color-purple-accent);
   border: 3px solid var(--ifm-background-color);
-  box-shadow: 0 0 0 3px var(--ifm-color-primary-lighter);
+  box-shadow: 0 0 0 3px rgba(162, 76, 223, 0.2);
   z-index: 1;
 }
 
@@ -126,7 +154,7 @@
   margin: 0;
   font-size: 1.5rem;
   font-weight: 700;
-  color: var(--ifm-color-primary);
+  color: var(--color-blue-accent);
 }
 
 .jobTitle {
@@ -145,8 +173,9 @@
 
 .duration {
   padding: 0.25rem 0.75rem;
-  background: var(--ifm-color-primary-lightest);
-  color: var(--ifm-color-primary-darkest);
+  background: rgba(162, 76, 223, 0.15);
+  color: var(--color-purple-accent);
+  border: 1px solid var(--color-purple-accent);
   border-radius: 20px;
   font-size: 0.875rem;
   font-weight: 600;

@@ -6,7 +6,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
   title: 'Ashley Wang',
-  tagline: 'Senior Engineering Manager | Kubernetes & Cloud-Native',
+  tagline: 'Software engineer, tech lead & open-source maintainer',
   favicon: 'img/favicon.ico',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -37,19 +37,8 @@ const config: Config = {
     [
       'classic',
       {
-        docs: {
-          sidebarPath: './sidebars.ts',
-        },
-        blog: {
-          showReadingTime: true,
-          feedOptions: {
-            type: ['rss', 'atom'],
-            xslt: true,
-          },
-          onInlineTags: 'warn',
-          onInlineAuthors: 'warn',
-          onUntruncatedBlogPosts: 'warn',
-        },
+        docs: false,
+        blog: false,
         theme: {
           customCss: './src/css/custom.css',
         },
@@ -60,7 +49,9 @@ const config: Config = {
   themeConfig: {
     image: 'img/docusaurus-social-card.jpg',
     colorMode: {
-      respectPrefersColorScheme: true,
+      defaultMode: 'dark',
+      disableSwitch: false,
+      respectPrefersColorScheme: false,
     },
     navbar: {
       title: 'Ashley Wang',
@@ -69,11 +60,13 @@ const config: Config = {
           href: 'https://www.linkedin.com/in/ashley-wang-6854a4a4/',
           label: 'LinkedIn',
           position: 'right',
+          className: 'navbar-linkedin-link',
         },
         {
           href: 'https://github.com/ashleywang1',
           label: 'GitHub',
           position: 'right',
+          className: 'navbar-github-link',
         },
       ],
     },
