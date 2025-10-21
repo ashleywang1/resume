@@ -26,10 +26,13 @@ function HomepageHeader() {
         </Heading>
         <p className="hero__subtitle"></p>
         <p className={styles.heroDescription}>
-          Hello! I'm Ashley Wang, a Senior Engineering Manager with 10+ years of experience building 
-          cloud-native, scalable microservices and distributed systems. I'm passionate about Kubernetes, 
-          service mesh architecture, and contributing to open-source projects that advance 
-          cloud-native infrastructure. Lets talk if you're building something interesting!
+          Hi! I'm Ashley, a software engineer with a focus on cloud-native systems, developer tooling,
+          and open-source collaboration. My work spans across Go, Python, and modern
+          infrastructure technologies like Kubernetes, Helm, and Istio. I'm passionate about
+          building reliable, maintainable systems and improving developer experience through
+          automation and thoughtful configuration. Outside of work, I contribute to open-source
+          projects and enjoy refining technical documentation, CI/CD workflows, and personal side
+          projects like this website.
         </p>
         <div className={styles.buttons}>
           <Link
