@@ -147,7 +147,7 @@ const MITProjects: ProjectItem[] = [
     title: 'ECTC Tournament Manager',
     icon: '🥋',
     link: 'https://github.com/ashleywang1/ECTC_tournament_manager',
-    category: 'MIT Project',
+    category: 'Side Project',
     tags: ['Docker', 'Full-Stack'],
     description: (
       <>
