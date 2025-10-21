@@ -5,8 +5,8 @@ import type * as Preset from '@docusaurus/preset-classic';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'My Resume',
-  tagline: 'Professional profile',
+  title: 'Ashley Wang',
+  tagline: 'Senior Engineering Manager | Kubernetes & Cloud-Native',
   favicon: 'img/favicon.ico',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -39,10 +39,6 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
         blog: {
           showReadingTime: true,
@@ -50,11 +46,6 @@ const config: Config = {
             type: ['rss', 'atom'],
             xslt: true,
           },
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-          // Useful options to enforce blogging best practices
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
           onUntruncatedBlogPosts: 'warn',
@@ -67,7 +58,6 @@ const config: Config = {
   ],
 
   themeConfig: {
-    // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
     colorMode: {
       respectPrefersColorScheme: true,
@@ -76,14 +66,12 @@ const config: Config = {
       title: 'Ashley Wang',
       items: [
         {
-          type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
-          position: 'left',
-          label: 'Tutorial',
+          href: 'https://www.linkedin.com/in/ashley-wang-6854a4a4/',
+          label: 'LinkedIn',
+          position: 'right',
         },
-        {to: '/blog', label: 'Blog', position: 'left'},
         {
-          href: 'https://github.com/facebook/docusaurus',
+          href: 'https://github.com/ashleywang1',
           label: 'GitHub',
           position: 'right',
         },
@@ -93,46 +81,41 @@ const config: Config = {
       style: 'dark',
       links: [
         {
-          title: 'Docs',
+          title: 'Connect',
           items: [
             {
-              label: 'Tutorial',
-              to: '/docs/intro',
-            },
-          ],
-        },
-        {
-          title: 'Community',
-          items: [
-            {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-            },
-            {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
-            },
-            {
-              label: 'X',
-              href: 'https://x.com/docusaurus',
-            },
-          ],
-        },
-        {
-          title: 'More',
-          items: [
-            {
-              label: 'Blog',
-              to: '/blog',
+              label: 'LinkedIn',
+              href: 'https://www.linkedin.com/in/ashley-wang-6854a4a4/',
             },
             {
               label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
+              href: 'https://github.com/ashleywang1',
+            },
+          ],
+        },
+        {
+          title: 'Projects',
+          items: [
+            {
+              label: 'MIT Mahjong 2048',
+              href: 'https://ashleywang1.github.io/2048/',
+            },
+            {
+              label: 'Secure Mafia Game',
+              href: 'https://github.com/ashleywang1/857MafiaGame',
+            },
+            {
+              label: 'Climate Change Viz',
+              href: 'https://github.com/ashleywang1/cms631-final-project',
+            },
+            {
+              label: 'Tournament Manager',
+              href: 'https://github.com/ashleywang1/ECTC_tournament_manager',
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `© ${new Date().getFullYear()} Ashley Wang. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,

@@ -1,68 +1,128 @@
+/**
+ * @fileoverview Features section showcasing MIT projects and technical achievements.
+ * Displays project cards with descriptions and external links.
+ */
+
 import type {ReactNode} from 'react';
 import clsx from 'clsx';
 import Heading from '@theme/Heading';
+import Link from '@docusaurus/Link';
 import styles from './styles.module.css';
 
-type FeatureItem = {
+type ProjectItem = {
   title: string;
-  Svg: React.ComponentType<React.ComponentProps<'svg'>>;
   description: ReactNode;
+  link: string;
+  icon: string;
+  tags: string[];
+  category: string;
 };
 
-const FeatureList: FeatureItem[] = [
+const ProjectList: ProjectItem[] = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    title: 'MIT Mahjong 2048',
+    icon: '🀄',
+    link: 'https://ashleywang1.github.io/2048/',
+    category: 'MIT Coursework',
+    tags: ['JavaScript', 'Game Development', 'UI/UX'],
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        A version of the 2048 game featuring Mahjong tiles, 
+        made as an advertisement for the MIT Mahjong Club. Built with vanilla JavaScript.
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    title: '6.857 Secure Distributed Mafia Game',
+    icon: '🔐',
+    link: 'https://github.com/ashleywang1/857MafiaGame',
+    category: 'MIT Coursework',
+    tags: ['Python', 'Cryptography', 'Distributed Systems'],
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        A distributed multiplayer implementation of the social deduction game Mafia, 
+        built as a final project for MIT's 6.857 Computer and Network Security course. 
+        Features secure cryptographic communications using Diffie-Hellman key exchange 
+        and encrypted message passing.
       </>
     ),
   },
   {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    title: 'Climate Change Interactive Visualization',
+    icon: '🌍',
+    link: 'https://github.com/ashleywang1/cms631-final-project',
+    category: 'MIT Coursework',
+    tags: ['JavaScript', 'Data Visualization', 'D3.js'],
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        An interactive web-based exploration of climate change data and impacts, 
+        created for CMS.631. Features dynamic visualizations and data-driven storytelling 
+        to communicate the urgency of environmental challenges.
+      </>
+    ),
+  },
+  {
+    title: 'ECTC Tournament Manager',
+    icon: '🥋',
+    link: 'https://github.com/ashleywang1/ECTC_tournament_manager',
+    category: 'MIT Sport Taekwondo',
+    tags: ['Docker', 'Full-Stack', 'Tournament Management'],
+    description: (
+      <>
+        A comprehensive tournament management system for the Eastern Collegiate Taekwondo 
+        Conference competitions. Dockerized application built to streamline registration, 
+        bracket management, and scoring for MIT Sport Taekwondo events.
       </>
     ),
   },
 ];
 
-function Feature({title, Svg, description}: FeatureItem) {
+/**
+ * @description Individual project card component
+ */
+function Project({title, description, link, icon, tags, category}: ProjectItem) {
   return (
-    <div className={clsx('col col--4')}>
-      <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
-      </div>
-      <div className="text--center padding-horiz--md">
-        <Heading as="h3">{title}</Heading>
-        <p>{description}</p>
+    <div className={clsx('col col--6')}>
+      <div className={styles.projectCard}>
+        <div className={styles.projectHeader}>
+          <div className={styles.projectIcon}>{icon}</div>
+          <span className={styles.projectCategory}>{category}</span>
+        </div>
+        <Heading as="h3" className={styles.projectTitle}>{title}</Heading>
+        <p className={styles.projectDescription}>{description}</p>
+        <div className={styles.tagContainer}>
+          {tags.map((tag, idx) => (
+            <span key={idx} className={styles.tag}>{tag}</span>
+          ))}
+        </div>
+        <Link
+          className={`button button--primary button--outline ${styles.projectButton}`}
+          href={link}
+          target="_blank"
+          rel="noopener noreferrer">
+          View Project →
+        </Link>
       </div>
     </div>
   );
 }
 
+/**
+ * @description Main features section displaying featured projects
+ */
 export default function HomepageFeatures(): ReactNode {
   return (
     <section className={styles.features}>
       <div className="container">
+        <Heading as="h2" className={styles.sectionTitle}>
+          Featured Projects
+        </Heading>
+        <p className={styles.sectionSubtitle}>
+          A selection of projects from MIT coursework and extracurricular activities
+        </p>
         <div className="row">
-          {FeatureList.map((props, idx) => (
-            <Feature key={idx} {...props} />
+          {ProjectList.map((props, idx) => (
+            <Project key={idx} {...props} />
           ))}
         </div>
       </div>
