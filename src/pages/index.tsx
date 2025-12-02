@@ -77,11 +77,60 @@ function WorkExperience(): ReactNode {
             <div className={styles.timelineContent}>
               <div className={styles.timelineHeader}>
                 <div>
+                  <Heading as="h3" className={styles.companyName}>GEICO</Heading>
+                  <p className={styles.jobTitle}>Senior Manager, Staff Software Engineering — Multi-Cloud Networking</p>
+                  <p className={styles.location}>Remote</p>
+                </div>
+                <span className={styles.duration}>Nov 2025 - Present</span>
+              </div>
+              <ul className={styles.achievements}>
+                <li>
+                  Led multi-cloud networking platform initiatives, driving release readiness, cross-team 
+                  coordination, and technical strategy for workload identity, service mesh, and networking controls
+                </li>
+                <li>
+                  Planned and executed v0.1.0-rc.6 release including branch management, rebase coordination, 
+                  and CI pipeline improvements; stabilized CI infrastructure by resolving critical path-filtering issues
+                </li>
+                <li>
+                  Architected and documented workload identity (WLID) management API endpoints and initiated 
+                  executive-level container scanning strategy for ACR/JFrog security compliance
+                </li>
+                <li>
+                  Investigated and resolved Azure egress gateway IP assignment and Cilium CNI configuration 
+                  challenges to improve multi-cloud deployment reliability
+                </li>
+                <li>
+                  Defined observability rollout strategy (Identity → Fabric → Compute) and evaluated platform 
+                  telemetry stack including Loki, Prometheus, Tempo, and ClickHouse for enterprise-scale monitoring
+                </li>
+                <li>
+                  Coordinated backlog prioritization with product and engineering leadership, facilitated 
+                  team stand-ups, and established on-call rotation processes to enhance operational readiness
+                </li>
+              </ul>
+              <div className={styles.techStack}>
+                <span className={styles.techBadge}>Kubernetes</span>
+                <span className={styles.techBadge}>Service Mesh</span>
+                <span className={styles.techBadge}>CI/CD</span>
+                <span className={styles.techBadge}>Observability</span>
+                <span className={styles.techBadge}>Security Architecture</span>
+                <span className={styles.techBadge}>Azure</span>
+                <span className={styles.techBadge}>Kafka</span>
+              </div>
+            </div>
+          </div>
+
+          <div className={styles.timelineItem}>
+            <div className={styles.timelineMarker}></div>
+            <div className={styles.timelineContent}>
+              <div className={styles.timelineHeader}>
+                <div>
                   <Heading as="h3" className={styles.companyName}>Solo.io</Heading>
                   <p className={styles.jobTitle}>Senior Manager, Gloo Platform</p>
                   <p className={styles.location}>Cambridge, MA</p>
                 </div>
-                <span className={styles.duration}>Sept 2019 - Present</span>
+                <span className={styles.duration}>Sept 2019 - Oct 2025</span>
               </div>
               <ul className={styles.achievements}>
                 <li>
@@ -89,6 +138,7 @@ function WorkExperience(): ReactNode {
                   Kubernetes, focusing on policy enforcement, observability, and secure 
                   service-to-service communication (mTLS/SPIFFE)
                 </li>
+
                 <li>
                   Delivered <strong>Gloo Mesh Core</strong> in August 2023, which became the 
                   highest-selling product in its launch quarter
