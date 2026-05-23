@@ -78,45 +78,45 @@ function WorkExperience(): ReactNode {
               <div className={styles.timelineHeader}>
                 <div>
                   <Heading as="h3" className={styles.companyName}>GEICO</Heading>
-                  <p className={styles.jobTitle}>Senior Manager, Staff Software Engineering — Multi-Cloud Networking</p>
+                  <p className={styles.jobTitle}>Senior Manager, Staff Software Engineering</p>
                   <p className={styles.location}>Remote</p>
                 </div>
-                <span className={styles.duration}>Nov 2025 - Present</span>
+                <span className={styles.duration}>Oct 2025 - Present</span>
               </div>
               <ul className={styles.achievements}>
                 <li>
-                  Led multi-cloud networking platform initiatives, driving release readiness, cross-team 
-                  coordination, and technical strategy for workload identity, service mesh, and networking controls
+                  Owned GEICO's zero-trust Hybrid Cloud Fabric control plane — an API-first mesh + SPIFFE 
+                  workload identity setup spanning Azure, AWS, and on-prem; replaced fragmented 
+                  firewall/review workflows with unified API-driven traffic controls
                 </li>
                 <li>
-                  Planned and executed v0.1.0-rc.6 release including branch management, rebase coordination, 
-                  and CI pipeline improvements; stabilized CI infrastructure by resolving critical path-filtering issues
+                  Managed the Hybrid Cloud Fabric platform team and drove the roadmap for gRPC/protobuf-backed 
+                  control-plane services (Istio, Cilium, Spire), Kafka + Cassandra-backed coordination and state, 
+                  and GitOps delivery (Helm, Flux, Terraform, GitHub Actions) for predictable lab/production rollouts
                 </li>
                 <li>
-                  Architected and documented workload identity (WLID) management API endpoints and initiated 
-                  executive-level container scanning strategy for ACR/JFrog security compliance
+                  Shipped ingress/egress hardening: Istio Ingress Gateway HTTPS onboarding, controlled egress, 
+                  mTLS integration for legacy AKS callers, and standardized egress off bespoke proxies — 
+                  reducing custom networking/TLS operational load
                 </li>
                 <li>
-                  Investigated and resolved Azure egress gateway IP assignment and Cilium CNI configuration 
-                  challenges to improve multi-cloud deployment reliability
-                </li>
-                <li>
-                  Defined observability rollout strategy (Identity → Fabric → Compute) and evaluated platform 
-                  telemetry stack including Loki, Prometheus, Tempo, and ClickHouse for enterprise-scale monitoring
-                </li>
-                <li>
-                  Coordinated backlog prioritization with product and engineering leadership, facilitated 
-                  team stand-ups, and established on-call rotation processes to enhance operational readiness
+                  Partnered with Secrets, Networking, Observability, and Platform teams to satisfy 
+                  Production Readiness Review (PRR) requirements and land production rollout
                 </li>
               </ul>
               <div className={styles.techStack}>
                 <span className={styles.techBadge}>Kubernetes</span>
-                <span className={styles.techBadge}>Service Mesh</span>
-                <span className={styles.techBadge}>CI/CD</span>
-                <span className={styles.techBadge}>Observability</span>
-                <span className={styles.techBadge}>Security Architecture</span>
-                <span className={styles.techBadge}>Azure</span>
+                <span className={styles.techBadge}>Istio</span>
+                <span className={styles.techBadge}>Cilium</span>
+                <span className={styles.techBadge}>SPIFFE/SPIRE</span>
+                <span className={styles.techBadge}>gRPC</span>
                 <span className={styles.techBadge}>Kafka</span>
+                <span className={styles.techBadge}>Cassandra</span>
+                <span className={styles.techBadge}>Helm</span>
+                <span className={styles.techBadge}>Flux</span>
+                <span className={styles.techBadge}>Terraform</span>
+                <span className={styles.techBadge}>Azure</span>
+                <span className={styles.techBadge}>AWS</span>
               </div>
             </div>
           </div>
